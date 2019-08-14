@@ -13,10 +13,10 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputName);
-    console.log(inputEmail);
-    console.log(inputRole);
+    setMembers([...members, {name: inputName, email: inputEmail, role: inputRole}]);
+    setInputEmail("");
     setInputName("");
+    setInputRole("");
   }
 
   const handleChange = (event) => {
@@ -35,11 +35,29 @@ function App() {
     <div className="App">
       <form onSubmit={event => handleSubmit(event)}>
         <label>
-          Username:
+          Name:
           <input
             type="text"
             name="addName"
             value={inputName}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Email:
+          <input
+            type="text"
+            name="addEmail"
+            value={inputEmail}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Role:
+          <input
+            type="text"
+            name="addRole"
+            value={inputRole}
             onChange={handleChange}
           />
         </label>

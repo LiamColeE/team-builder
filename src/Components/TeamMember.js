@@ -5,8 +5,8 @@ function TeamMember(props) {
     return (
         <div>
             <h1>{props.member.name}</h1>
-            <h1>{props.member.email}</h1>
-            <h1>{props.member.role}</h1>
+            <p>{props.member.email}</p>
+            <p>{props.member.role}</p>
         </div>
     );
 }
