@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { useState } from 'react';
 import TeamDisplay from "./Components/TeamDisplay"
-import 'semantic-ui-css/semantic.min.css'
+import Form from "./Components/Form"
 
 function App() {
   const [members, setMembers] = useState([{name: "Liam Edlinger", email: "liamedlinger@gmail.com", role: "sexy beast"}]);
@@ -33,36 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={event => handleSubmit(event)}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="addName"
-            value={inputName}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="text"
-            name="addEmail"
-            value={inputEmail}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Role:
-          <input
-            type="text"
-            name="addRole"
-            value={inputRole}
-            onChange={handleChange}
-          />
-        </label>
-        <button>Submit!</button>
-      </form>
+      <Form handleSubmit={handleSubmit} handleChange={handleChange} inputRole={inputRole} inputEmail={inputEmail} inputName={inputName}/>
 
       <TeamDisplay members={members}/>
     </div>
