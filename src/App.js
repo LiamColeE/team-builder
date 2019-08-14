@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import { useState } from 'react';
 import TeamDisplay from "./Components/TeamDisplay"
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   const [members, setMembers] = useState([{name: "Liam Edlinger", email: "liamedlinger@gmail.com", role: "sexy beast"}]);

@@ -1,13 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 function TeamMember(props) {
     return (
-        <div>
-            <h1>{props.member.name}</h1>
+        <Card>
+            <Card.Content>
+            <Card.Header>{props.member.name}</Card.Header>
             <p>{props.member.email}</p>
             <p>{props.member.role}</p>
-        </div>
+            </Card.Content>
+        </Card>
     );
 }
 
